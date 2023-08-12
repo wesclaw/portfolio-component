@@ -1,0 +1,63 @@
+body {
+  background-color: black;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.p_el{
+  color: ghostwhite;
+  font-size: 2rem;
+  font-family: sans-serif;
+  letter-spacing: .1em; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  color: ghostwhite;
+  font-family: sans-serif;
+}
+
+input{
+  text-align: center; 
+  padding: 8px;
+  width: 100%;
+  border-radius: 20px;
+  font-size: 1.2rem;
+}
+
+span{
+  color: ghostwhite;
+  font-family: 'Caprasimo', sans-serif;
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-size: 8rem;
+  cursor: pointer;
+}
+
+.span_el{
+  color: ghostwhite;
+  font-family: 'Caprasimo', sans-serif;
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-size: 8rem;
+  cursor: pointer;
+}
+
+
+
+.container{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.big{
+  scale: 1.4;
+  transition: .01s;
+}
+
