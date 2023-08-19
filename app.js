@@ -41,34 +41,36 @@ const body = document.querySelector('body');
 const date = new Date();
 const h = date.getHours();
 
+// i can either exit out of the form somehow or just delete the form and add the submit btn with on click triggering the function. use with the form to have the colors change based on user input
+
 form.addEventListener('submit', e => {
   e.preventDefault();
   const userName = input.value;
   const container_el = document.createElement('div');
-  const capitalizedUserName = userName.charAt(0).toUpperCase() + userName.slice(1);
+  const capitalizedUserName =
+  userName.charAt(0).toUpperCase() + userName.slice(1);
   container_el.classList.add('container');
 
-  
-  const p_el = document.createElement('p');
+  const p_el = document.createElement('p'); 
   p_el.classList.add('p_el');
   container_el.append(p_el);
- 
   body.append(container_el);
-  for (let i = 0; i < userName.length; i++) {
+
+  for (let i = 0; i < userName.length; i++) {  
     const span_el = document.createElement('span');
     span_el.classList.add('span_el');
     container_el.append(span_el);
     if (h >= 0 && h < 12) {
-      p_el.textContent = 'Good morning, ' 
-      span_el.textContent = capitalizedUserName[i];    
+      p_el.textContent = 'Good morning, ';
+      span_el.textContent = capitalizedUserName[i];
     } else if (h >= 12 && h < 17) {
-      p_el.textContent = 'Good afternoon, ' 
-      span_el.textContent = capitalizedUserName[i]; 
+      p_el.textContent = 'Good afternoon, ';
+      span_el.textContent = capitalizedUserName[i];
     } else {
-      p_el.textContent = 'Good evening, ' 
-      span_el.textContent = capitalizedUserName[i]; 
+      p_el.textContent = 'Good evening, ';
+      span_el.textContent = capitalizedUserName[i];
     }
-    span_el.addEventListener('mouseover', e => { 
+    span_el.addEventListener('mouseover', e => {
       span_el.classList.add('big');
     });
     span_el.addEventListener('mouseout', e => {
@@ -77,3 +79,5 @@ form.addEventListener('submit', e => {
   }
   form.style.display = 'none';
 });
+
+

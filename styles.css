@@ -7,10 +7,12 @@ body {
   flex-direction: column;
 }
 
+/* when the sun is clicked. i want the body to peel away with skew() the body then turns white. starts at top right corner */
+
 .p_el{
   color: ghostwhite;
   font-size: 2rem;
-  font-family: sans-serif;
+  font-family: sans-serif; 
   letter-spacing: .1em; 
 }
 
@@ -54,6 +56,19 @@ span{
   display: flex;
   gap: 8px;
   align-items: center;
+  animation-name: appear;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; 
+}
+
+@keyframes appear{
+  from{ 
+    opacity: 0; 
+  }to{   
+    opacity: 1;
+    
+  }
 }
 
 .big{
@@ -61,3 +76,52 @@ span{
   transition: .01s;
 }
 
+.navbar{
+  width: 100vw;
+  height: 50px;
+  background-color: rgba(107, 107, 112, 0.938);
+  /* background-color: brown; */
+  position: absolute;
+  top: 0;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  max-width: 80%;
+  margin: auto;
+}
+
+li{
+  list-style: none;
+  
+}
+
+
+
+.sun{
+  font-size: 1.5rem;
+  color: rgba(206, 206, 112, 0.877);
+  cursor: pointer;
+}
+
+.moon{ 
+  font-size: 1.5rem;
+  color: rgba(44, 44, 42, 0.877);
+  cursor: pointer;
+}
+
+.moon-img{
+  display: none;
+}
+
+.sun-img{
+  display: block;
+}
+
+
+.body-light{
+  background-color: ghostwhite;
+}
